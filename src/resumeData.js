@@ -1,8 +1,8 @@
 let resumeData = {
     "imagebaseurl":"https://ivy555.github.io/",
-    "name": "Hariz Zariman",
-    "firstname": "Hariz",
-    "lastname": "Zariman",
+    "name": "Arjun Naageshwaran",
+    "firstname": "Arjun",
+    "lastname": "Naageshwaran",
     "role": "Full Stack Developer",
     "linkedinId":"Your ID",
     "skypeid": "Your skypeid",

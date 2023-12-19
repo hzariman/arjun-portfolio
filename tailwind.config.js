@@ -4,7 +4,16 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'AFont': ["'AFont'"]
+      },
+
+      textColor: {
+        'AOrange': 'rgb(246, 180, 67)',
+      }
+
+    },
   },
   plugins: [],
 }

@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'AFont', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -14,4 +14,22 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: 'AFont'; /* Choose a name for your font */
+  src: url('../public/itc-eras-ultra-cufonfonts/ITC\ Eras\ Medium.otf') format('opentype');
+  /* Add additional font formats if needed, such as woff, woff2, etc. */
+}
+
+@font-face {
+  font-family: 'AFont'; /* Choose a name for your font */
+  src: url('../public/itc-eras-ultra-cufonfonts/ITC\ Eras\ Bold.otf') format('opentype');
+  /* Add additional font formats if needed, such as woff, woff2, etc. */
+  font-weight: bold;
+}
+
+@layer components {
+
+
 }
