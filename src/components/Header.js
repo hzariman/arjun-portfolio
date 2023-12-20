@@ -16,15 +16,16 @@ return (
     </nav>
 
     <div className="inline-block w-[85%] text-center my-0 mx-auto w-max-[1020px] pb-[30px]">
-        <div className="w-full">
+        <div className="w-full flex items-center flex-col">
             <h1 className="text-sm md:text-[90px] sm:text-[78px] leading-[1.5em] font-AFont tracking-[-2px] mt-0 mr-auto mb-[18px] ml-auto drop-shadow-xl">{resumeData.firstname} <span className = "text-AOrange">{resumeData.lastname}</span></h1>
-            <h2 className= "float-left ml-[30%] text-sm md:text-[1.5em] sm:text-[1em] leading-[1.5em]" style={{color:'#fff', fontFamily:'AFont'}}>Skills & <span className='text-AOrange'>Projects</span> in <span className="word"></span></h2>
+            <h2 className= "w-[40%] ml-auto mr-auto pl-[2em] text-left text-sm md:text-[1.5em] sm:text-[1em] leading-[1.5em]" style={{color:'#fff', fontFamily:'AFont', float: 'left'}}>Skills & <span className='text-AOrange'>Projects</span> in <span className="word"></span></h2>
 {/* <ul className="background">
 <li></li>
 <li></li>
 <li></li>
 <li></li>
 <li></li>
+<span className="word"></span>
 </ul> */}
 <ul className="social">
 {
