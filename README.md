@@ -1,3 +1,10 @@
+# Reference for Arjun
+If you haven't already, install git and node.js (from their website). Then, clone this repo (`git clone (url of this repo)`) and run `npm install` to install all the dependencies. 
+Then checkout to the current working branch (`git checkout (homepage)`).
+Then, run `npm start` to start the development server. You can view the website at `localhost:3000`.
+
+For future reference, run `git pull` to pull the latest changes from the repo, and `git push` to push your changes to the repo.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
