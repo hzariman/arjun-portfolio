@@ -23,6 +23,29 @@ let resumeData = {
     "aboutme2" :"In my free time, I enjoy playing golf, skiing and binge watching Netflix!", 
     "address":"San Diego, CA",
     "website":"https://harizzariman.com/",
+    "work":[
+        {
+        "JobTitle": "Manufacturing Engineering Intern",
+        "CompanyName":"Collins Aerospace",
+        "Location":"Riverside, CA",
+        "Image" : "images/UCSD-Emblem.png",
+        "StartDate":"June",
+        "EndDate":"August 2022",
+        "Tasks": ["Developing code to display light patterns representing status codes for scale model of autonomous vehicle.", "Designed and 3-D printed cases for electronic components (PDB) to be used in autonomous vehicle."],
+        "Skills": ["Python", "Catia", "VBA", "Manufacturing"],
+        },
+        {
+        "JobTitle": "Software Engineering Intern",
+        "CompanyName":"AirAsia",
+        "Location":"Kuala Lumpur, Malaysia",
+        "Image" : "images/UCSD-Emblem.png",
+        "StartDate":"June 2022",
+        "EndDate":"September 2022",
+        "BriefJD" : "Worked in a small team to develop in-house applications in Agile environment.",
+        "Tasks": ["Developed a query filter system when generating reports for a cash advance website.", "Created front-end UI and back-end functionality for generating summary reports", "Resolved database conflicts identified by user support tickets."],
+        "Skills": ["Flask", "Angular", "HTML", "CSS", "SQL"],
+        }
+        ],
     "education":[
     {
     "UniversityName":"University of California, San Diego",
@@ -43,30 +66,6 @@ let resumeData = {
     "EndDate":"September 2020",
     "Grades":"Mathematics: A | Physics: A | Computer Science: A | Extended Project Qualification: A*",
     "AdditionalInfo" : "Completed the A-Level curriculum for Pearson Edexcel GCE (Mathematics) and AQA GCE (Physics and Computer Science) exam boards. Also completed the Extended Project Qualification (EPQ) in which I investigated the topic 'To what extent can cryptocurrencies replace current everyday monetary transactions'.",
-    }
-    ],
-    "work":[
-    {
-    "JobTitle": "Embedded Systems Developer",
-    "CompanyName":"TritonAI, UC San Diego",
-    "Location":"San Diego, California",
-    "Image" : "images/TritonAI-Emblem.png",
-    "StartDate":"May 2023",
-    "EndDate":"Present",
-    "BriefJD":"Working in university lab focused on artificial intelligence and robotics competitions.",
-    "Tasks": ["Developing code to display light patterns representing status codes for scale model of autonomous vehicle.", "Designed and 3-D printed cases for electronic components (PDB) to be used in autonomous vehicle."],
-    "Skills": ["C++", "Python", "Arduino", "3D-Printing"],
-    },
-    {
-    "JobTitle": "Software Engineering Intern",
-    "CompanyName":"AirAsia",
-    "Location":"Kuala Lumpur, Malaysia",
-    "Image" : "images/AirAsia-Emblem.png",
-    "StartDate":"June 2022",
-    "EndDate":"September 2022",
-    "BriefJD" : "Worked in a small team to develop in-house applications in Agile environment.",
-    "Tasks": ["Developed a query filter system when generating reports for a cash advance website.", "Created front-end UI and back-end functionality for generating summary reports", "Resolved database conflicts identified by user support tickets."],
-    "Skills": ["Flask", "Angular", "HTML", "CSS", "SQL"],
     }
     ],
     "skillsDescription":"",

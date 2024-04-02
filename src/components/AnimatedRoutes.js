@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 import Header from './Header';
+import Work from './Work'
 
 import { AnimatePresence } from "framer-motion";
 
@@ -14,6 +15,7 @@ function AnimatedRoutes(props) {
     <Route path="/" element={
       <div className="App">
       <Header resumeData={resumeData}/>
+      <Work resumeData={resumeData}/>
     </div>
     }/>
     </Routes>

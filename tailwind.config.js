@@ -8,6 +8,9 @@ module.exports = {
       fontFamily:{
         'AFont': ["'AFont'"]
       },
+      colors: {
+        'AOrange': 'rgb(246, 180, 67)',
+      },
 
       textColor: {
         'AOrange': 'rgb(246, 180, 67)',

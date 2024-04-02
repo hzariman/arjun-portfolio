@@ -22,12 +22,7 @@ code {
   /* Add additional font formats if needed, such as woff, woff2, etc. */
 }
 
-@font-face {
-  font-family: 'AFont'; /* Choose a name for your font */
-  src: url('../public/itc-eras-ultra-cufonfonts/ITC\ Eras\ Bold.otf') format('opentype');
-  /* Add additional font formats if needed, such as woff, woff2, etc. */
-  font-weight: bold;
-}
+
 
 @layer components {
 

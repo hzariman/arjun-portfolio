@@ -6,7 +6,7 @@ let resumeData = this.props.resumeData;
 return (
 <React.Fragment>
 <motion.header id="home" className='flex items-center justify-center relative h-screen min-h-[500px] w-full text-white text-center overflow-hidden animatedBG' initial={{ opacity : 0}} animate={{ opacity: 1}} transition={{ duration: 2 }} exit={{ x: -300, opacity: 0 }}>
-    <nav id="nav-wrap" className='tracking-[1.5px] mt-0 mb-0 ml-auto mr-auto z-100 top-0 left-0 fixed w-full text-center text-transform: uppercase font-AFont'>
+    <nav id="nav-wrap" className='tracking-[1.5px] mt-0 mb-0 ml-auto mr-auto mt-5 z-100 top-0 left-0 fixed w-full text-center text-transform: uppercase font-AFont'>
         <ul className='min-h-[48px] w-auto'>
             <li className="inline-block relative h-[48px] scroll-smooth"><a className="py-[8px] px-[13px] transition-bg duration-150 ease-in hover:text-AOrange" href="#home">Home</a></li>
             <li className="inline-block relative h-[48px] scroll-smooth"><a className="py-[8px] px-[13px] transition-bg duration-150 ease-in hover:text-AOrange" href="#about">About</a></li>
