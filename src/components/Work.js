@@ -4,15 +4,15 @@ export default class About extends Component {
   render() {
     let resumeData = this.props.resumeData;
     return (
-      <section id="work" className='block pt-[90px] pb-[72px] px-[15%] overflow-hidden border-[5px] border-solid border-AOrange'>
-<div className='TODO border-[5px] border-solid border-red-500 flex flex-col mx-auto pt-[3%]'>
+      <section id="work" className='block pt-[90px] pb-[72px] px-[15%] overflow-hidden'>
+<div className='TODO borderAnimate flex flex-col mx-auto pt-[3%] bg-white'>
         <div className="block w-[96%] max-w-[1020px] my-0 mx-auto">
           <h1 className='text-transform: uppercase font-AFont font-bold'><span className='border-b-[3px] border-solid border-AOrange'>Work Experience</span></h1>
         </div>
         <div className="block mb-[48px] pb-[48px] w-[96%] max-w-[1020px] my-0 mx-auto">
           {resumeData.work && resumeData.work.map((item, i) => {
             return (
-              <div className="pb-[25px] pt-[50px] px-0 w-full border-[5px] border-solid border-AOrange float-left" key={i}>
+              <div className="pb-[25px] pt-[50px] px-0 w-full float-left" key={i}>
                 <div className="columns relative px-[20px] py-0 float-left">
                   <img src={`${item.Image}`} className="w-[150px] aspect-auto" alt='images/UCSD-Emblem.png'/> 
                 </div> 

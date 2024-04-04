@@ -14,8 +14,10 @@ function AnimatedRoutes(props) {
     <Routes location={location} key={location.pathname}>
     <Route path="/" element={
       <div className="App">
+        <div className="animatedBG">
       <Header resumeData={resumeData}/>
       <Work resumeData={resumeData}/>
+        </div>
     </div>
     }/>
     </Routes>

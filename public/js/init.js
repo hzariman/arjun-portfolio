@@ -3,7 +3,7 @@
 /* Init JS
 /*
 -----------------------------------------------------------------------------------*/
-var words = ['Cringe', 'Simping', 'Jelqing'],
+var words = ['Cringe', 'Simping', 'being thicc'],
     part,
     i = 0,
     offset = 0,

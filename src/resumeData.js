@@ -28,7 +28,7 @@ let resumeData = {
         "JobTitle": "Manufacturing Engineering Intern",
         "CompanyName":"Collins Aerospace",
         "Location":"Riverside, CA",
-        "Image" : "images/UCSD-Emblem.png",
+        "Image" : "images/work1.png",
         "StartDate":"June",
         "EndDate":"August 2022",
         "Tasks": ["Developing code to display light patterns representing status codes for scale model of autonomous vehicle.", "Designed and 3-D printed cases for electronic components (PDB) to be used in autonomous vehicle."],
