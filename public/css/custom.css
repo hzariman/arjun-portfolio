@@ -19,12 +19,56 @@
     animation: color 12s ease-in-out infinite;
 }
 
-.borderAnimate{
-    border-radius: 1rem;
-    box-shadow: 0.125rem 0.25rem 0.25rem 0.5rem oklch(0.1 0.37 315 / 0.25);
-    padding: 1rem
-    
+.borderAnimate {
+    border-radius: 2rem;
+    padding: 1rem;
+    position: relative;
+    z-index: 2; /* This ensures the element itself is positioned above its ::before pseudo-element */
+    background: white;
+    overflow: hidden;
 }
+
+.borderAnimate::before {
+    content: '';
+    position: absolute;
+    left:-11%;
+    top:25%;
+    width: 125%; /* Ensures the pseudo-element spans the full width of the parent */
+    height: 50%; /* Ensures the pseudo-element spans the full height of the parent */
+    background: #fab028;
+    animation:  rotate 8s linear infinite;
+    z-index: -1; /* This ensures the pseudo-element is behind the parent content */
+}
+
+/* NOTE TOO HARIZ: Reponsiveness is hella cooked. We can hard code dimensions based on AJ 
+    phone and smaller screens mockup spec */
+@media (max-width: 480px) {
+    .borderAnimate::before {
+        left: 0;
+        top: 15%;
+        width: 100%; /* Full width */
+        height: 70%; /* Taller to maintain visibility */
+    }
+}
+
+.borderAnimate::after{
+    content: '';
+    position: absolute;
+    background: white;
+    inset: 5px;
+    z-index: -1;
+    border-radius: 2rem;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 .arrow {
 	width: 6vmin;

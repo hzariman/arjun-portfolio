@@ -4,13 +4,13 @@ export default class About extends Component {
   render() {
     let resumeData = this.props.resumeData;
     return (
-      <section id="work" className='block pt-[90px] pb-[72px] px-[15%] overflow-hidden'>
+      <section id="research" className='block pt-[90px] pb-[72px] px-[15%] overflow-hidden'>
 <div className='TODO flex flex-col mx-auto pt-[3%] borderAnimate'>
         <div className="block w-[96%] max-w-[1020px] my-0 mx-auto">
-          <h1 className='text-transform: uppercase font-AFont font-bold'><span className='border-b-[3px] border-solid border-AOrange'>Work Experience</span></h1>
+          <h1 className='text-transform: uppercase font-AFont font-bold'><span className='border-b-[3px] border-solid border-AOrange'>Research Experience</span></h1>
         </div>
         <div className="block mb-[48px] pb-[48px] w-[96%] max-w-[1020px] my-0 mx-auto">
-          {resumeData.work && resumeData.work.map((item, i) => {
+          {resumeData.research && resumeData.research.map((item, i) => {
             return (
               <div className="pb-[25px] pt-[50px] px-0 w-full float-left" key={i}>
                 <div className="columns relative px-[20px] py-0 float-left">
@@ -18,9 +18,9 @@ export default class About extends Component {
                 </div> 
                 <div className="columns main block relative px-[20px] py-0 min-h-[1px] float-left">
                   <div className="twelve rows block w-full">
-                    <h3 className='font-semibold text-xl underline'>{item.JobTitle}</h3>
+                    <h3 className='font-semibold text-xl underline'>{item.Title}</h3>
                     <p className="info">
-                      {item.CompanyName}
+                      {item.Mentor}
                       <span className="mx-1">|</span> <em className="location">{item.Location}</em>
 <span className="mobile-date"><span className="mx-1">|</span> <em className="date">{item.StartDate} - {item.EndDate}</em></span>
 

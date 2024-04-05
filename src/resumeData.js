@@ -46,6 +46,19 @@ let resumeData = {
         "Skills": ["Flask", "Angular", "HTML", "CSS", "SQL"],
         }
         ],
+
+    "research":[
+        {
+            "Title": "UCSD Triton AI Lab",
+            "Mentor": "Prof. Jack Silberman",
+            "Location":"La Jolla, CA",
+            "Image" : "images/TritonAI-Emblem.png",
+            "StartDate":"October 2021",
+            "EndDate":"June 2024",
+            "Tasks": ["Developing a deep learning model to predict the next frame in a video sequence", "Implementing a convolutional neural network to detect objects in images", "Creating a reinforcement learning model to play the game of Pong"],
+            "Skills": ["Python", "Tensorflow", "PyTorch", "OpenCV"],
+        },
+        ],
     "education":[
     {
     "UniversityName":"University of California, San Diego",

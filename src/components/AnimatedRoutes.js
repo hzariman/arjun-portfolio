@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 
 import Header from './Header';
 import Work from './Work'
+import Research from './Research'
 
 import { AnimatePresence } from "framer-motion";
 
@@ -17,6 +18,7 @@ function AnimatedRoutes(props) {
         <div className="animatedBG">
       <Header resumeData={resumeData}/>
       <Work resumeData={resumeData}/>
+      <Research resumeData={resumeData}/>
         </div>
     </div>
     }/>
