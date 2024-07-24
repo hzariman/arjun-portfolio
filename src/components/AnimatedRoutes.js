@@ -4,6 +4,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import Header from './Header';
 import Work from './Work'
 import Research from './Research'
+import Projects from './Projects'
 
 import { AnimatePresence } from "framer-motion";
 
@@ -19,6 +20,7 @@ function AnimatedRoutes(props) {
       <Header resumeData={resumeData}/>
       <Work resumeData={resumeData}/>
       <Research resumeData={resumeData}/>
+      <Projects resumeData={resumeData}/>
         </div>
     </div>
     }/>
