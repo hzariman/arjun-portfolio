@@ -93,19 +93,19 @@ var wordflick = function () {
 /*----------------------------------------------------*/
 /* Smooth Scrolling
 ------------------------------------------------------ */
+   // DEPRECRATED - using react-scroll instead
+   // $('.smoothscroll').live('click',function (e) {
+	//     e.preventDefault();
 
-   $('.smoothscroll').live('click',function (e) {
-	    e.preventDefault();
+	//     var target = this.hash;
+	//     $target = $(target);
 
-	    var target = this.hash,
-	    $target = $(target);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 800, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
+	//     $('html, body').stop().animate({
+	//         'scrollTop': $target.offset().top
+	//     }, 800, 'swing', function () {
+	//         window.location.hash = target;
+	//     });
+	// });
 
 
 /*----------------------------------------------------*/
@@ -136,20 +136,20 @@ var wordflick = function () {
 
    $(window).on('scroll', function() {
 
+      // OFFSET set by smoothscroll offset in header component
+      var offset = -70;
+
 		var header = $('header').height();
-      var about = $('section#about').outerHeight() + header;
-      var resume = $('section#resume').outerHeight() + about;
-      var education = $('div.row.education').outerHeight() + about;
-      var work = $('div.row.work').outerHeight() + education;
-      var projects = $('div.row.projects-title').outerHeight() + work;
-      var portfolio = $('section#portfolio').outerHeight() + projects;
-      var contact = $('section#contact').outerHeight() + portfolio; 
+      var work = $('section#work').outerHeight() + header + offset;
+      var research = $('section#research').outerHeight() + work + offset;
+      var projects = $('section#projects').outerHeight() + research + offset;
 
 		var y = $(window).scrollTop();
       var nav = $('#nav-wrap');
       var navigation_links = $("#nav-wrap a");
 
       // console.log("y: " + y + " header: " + header + " about: " + about + " resume: " + resume + " portfolio: " + portfolio + " contact: " + contact);
+      console.log("y: " + y + " header: " + header + " work: " + work + " research: " + research + " projects: " + projects);
 
 	   if ( (y > header*.20) && (y < header) && ($(window).outerWidth() > 768 ) ) {
 	      nav.fadeOut('fast');
@@ -178,26 +178,26 @@ var wordflick = function () {
       
       // var cond = (y > header) && (y < about);
       // console.log("y: " + y + " header: " + header + " about: " + about + " cond: " + cond);
+   
       switch (true) {
-         case (y >= header) && (y < about):
+         case (y >= header) && (y < work):
             navigation_links.parent().removeClass("current");
-            $("#nav-wrap a[href='#about']").parent().addClass("current");
+            $("#nav-wrap li.work").addClass("current");
             break;
 
-         case (y >= about) && (y < projects):
+         case (y >= work) && (y < research):
             navigation_links.parent().removeClass("current");
-            $("#nav-wrap a[href='#resume']").parent().addClass("current");
+            $("#nav-wrap li.research").addClass("current");
             break;
-         
 
-         case (y >= work) && (y < resume):
+         case (y >= research) && (y < projects):
             navigation_links.parent().removeClass("current");
-            $("#nav-wrap a[href='#projects']").parent().addClass("current");
+            $("#nav-wrap li.projects").addClass("current");
             break;
-         
+
          default:
             navigation_links.parent().removeClass("current");
-            $("#nav-wrap a[href='#home']").parent().addClass("current");
+            $("#nav-wrap li.home").addClass("current");
             // console.log("DEFAULT REACHED");
       }
 
