@@ -5,7 +5,7 @@ export default class About extends Component {
     let resumeData = this.props.resumeData;
     return (
       <section id="research" className='block pt-[90px] pb-[72px] px-[15%] overflow-hidden'>
-        <div className='TODO flex flex-col mx-auto pt-[3%] bg-white rounded-lg animated-border'>
+        <div className='TODO flex flex-col mx-auto pt-[3%] bg-white borderAnimate'>
           <div className="block w-[96%] max-w-[1020px] my-0 mx-auto text-center md:text-left">
             <h1 className='text-transform: uppercase font-AFont font-bold'>
               <span className='border-b-[3px] border-solid border-AOrange'>Research Experience</span>

@@ -22,7 +22,7 @@ ul.nav li.current {
     border-radius: 2rem;
     padding: 1rem;
     position: relative;
-    z-index: 2; /* This ensures the element itself is positioned above its ::before pseudo-element */
+    z-index: 2; /* Ensures the element is above its ::before pseudo-element */
     background: white;
     overflow: hidden;
 }
@@ -30,27 +30,17 @@ ul.nav li.current {
 .borderAnimate::before {
     content: '';
     position: absolute;
-    left:-11%;
-    top:25%;
+    left: -11%;
+    top: 25%;
     width: 125%; /* Ensures the pseudo-element spans the full width of the parent */
     height: 50%; /* Ensures the pseudo-element spans the full height of the parent */
     background: #fab028;
-    animation:  rotate 8s linear infinite;
-    z-index: -1; /* This ensures the pseudo-element is behind the parent content */
+    transform: rotate(30deg);
+    z-index: -1; /* Ensures the pseudo-element is behind the parent content */
+    transition: transform 0.8s ease; /* Smooth transition for the rotation */
 }
 
-/* NOTE TOO HARIZ: Reponsiveness is hella cooked. We can hard code dimensions based on AJ 
-    phone and smaller screens mockup spec */
-@media (max-width: 480px) {
-    .borderAnimate::before {
-        left: 0;
-        top: 15%;
-        width: 100%; /* Full width */
-        height: 70%; /* Taller to maintain visibility */
-    }
-}
-
-.borderAnimate::after{
+.borderAnimate::after {
     content: '';
     position: absolute;
     background: white;
@@ -58,6 +48,48 @@ ul.nav li.current {
     z-index: -1;
     border-radius: 2rem;
 }
+
+.borderAnimate:hover::before {
+    transform: rotate(180deg); /* Rotates 150 degrees more from the initial 30 degrees */
+}
+
+
+/* NOTE TOO HARIZ: Reponsiveness is hella cooked. We can hard code dimensions based on AJ 
+    phone and smaller screens mockup spec */
+    @media (max-width: 768px) {
+        /* Replace .borderAnimate with .animated-border styles */
+        .borderAnimate {
+            border-radius: 0.5rem;
+            padding: 1rem;
+            position: relative;
+            z-index: 2;
+            background: white;
+            overflow: hidden;
+            border: 3px solid transparent;
+            transition: border 0.5s ease;
+        }
+    
+        .borderAnimate::before,
+        .borderAnimate::after {
+            display: none; /* Hide the rotating border effect */
+        }
+    
+        .borderAnimate:hover {
+            border-color: #fab028; /* Tailwind's AOrange color */
+            animation: borderAnimation 0.5s forwards;
+        }
+    }
+    
+    @keyframes borderAnimation {
+        0% {
+          border-width: 0;
+        }
+        100% {
+          border-width: 3px;
+        }
+    }
+    
+
 
 @keyframes borderAnimation {
     0% {
@@ -162,53 +194,21 @@ ul.nav li.current {
 
 
 .arrow {
-	width: 6vmin;
-	height: 6vmin;
-	box-sizing: border-box;
-	position: absolute;
-	left: 50%;
-	bottom:30px;
-	transform: rotate(135deg);
-	
-	&::before {
-		content: '';
-		width: 100%;
-		height: 100%;
-		border-width: .6vmin .6vmin 0 0;
-		border-style: solid;
-		border-color: #fafafa;
-		transition: .2s ease;
-		display: block;
-		transform-origin: 100% 0;
-	}
+    box-sizing: border-box;
+    height: 5vw;
+    width: 5vw;
+    border-style: solid;
+    border-color: white;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(45deg);
+    transition: border-width 100ms ease-in-out;
+  }
+  
+  .arrow:hover {
+    border-bottom-width: 4px;
+    border-right-width: 4px;
 
-	
-	&:after {
-		content: '';
-		float: left;
-		position: relative;
-		top: -100%;
-		width: 100%;
-		height: 100%;
-		border-width: 0 .6vmin 0 0;
-		border-style: solid;
-		border-color: #fafafa;
-		transform-origin: 100% 0;
-		transition:.2s ease;
-	}
-	
-	&:hover::after {
-		transform: rotate(45deg);
-		border-color: orange;
-		height: 120%;
-	}
-	&:hover::before {
-		border-color: orange;
-		transform: scale(.8);
-		
-	}
-	
-}
+  }
 
 @keyframes color {
     0% {

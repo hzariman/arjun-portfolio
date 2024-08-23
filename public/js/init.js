@@ -94,18 +94,18 @@ var wordflick = function () {
 /* Smooth Scrolling
 ------------------------------------------------------ */
    // DEPRECRATED - using react-scroll instead
-   // $('.smoothscroll').live('click',function (e) {
-	//     e.preventDefault();
+   $('.smoothscroll').live('click',function (e) {
+	    e.preventDefault();
 
-	//     var target = this.hash;
-	//     $target = $(target);
+	    var target = this.hash;
+	    $target = $(target);
 
-	//     $('html, body').stop().animate({
-	//         'scrollTop': $target.offset().top
-	//     }, 800, 'swing', function () {
-	//         window.location.hash = target;
-	//     });
-	// });
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 800, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
 
 
 /*----------------------------------------------------*/
@@ -149,7 +149,7 @@ var wordflick = function () {
       var navigation_links = $("#nav-wrap a");
 
       // console.log("y: " + y + " header: " + header + " about: " + about + " resume: " + resume + " portfolio: " + portfolio + " contact: " + contact);
-      console.log("y: " + y + " header: " + header + " work: " + work + " research: " + research + " projects: " + projects);
+      // console.log("y: " + y + " header: " + header + " work: " + work + " research: " + research + " projects: " + projects);
 
 	   if ( (y > header*.20) && (y < header) && ($(window).outerWidth() > 768 ) ) {
 	      nav.fadeOut('fast');
