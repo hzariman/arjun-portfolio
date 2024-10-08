@@ -83,8 +83,10 @@ export default class Header extends Component {
                 className="w-full sm:w-[80%] md:w-[60%] lg:w-[40%] mx-auto text-center sm:text-left text-base sm:text-lg md:text-xl lg:text-2xl leading-snug"
                 style={{ color: '#fff', fontFamily: 'AFont' }}
               >
+                {/* Skills & <span className="text-AOrange">Projects</span> in */}
                 Skills & <span className="text-AOrange">Projects</span> in <span className="word"></span>
               </h2>
+              <div id="box"></div>
 
               <ul className="social flex justify-center space-x-4 mt-4">
                 {resumeData.socialLinks && resumeData.socialLinks.map(item => (

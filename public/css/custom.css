@@ -437,6 +437,35 @@ ul.nav li.current {
     }
   }
   
+  .text-slide {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    right: 15%;
+    text-align: center;
+    transform: translateY(-50%);
+    line-height: 60px;
+    color: #dddedf;
+  }
+  
+  .text-slide span.animated-letter { /* Updated class name for the animated spans */
+    margin: 10px;
+    opacity: 0;
+    filter: blur(20px);
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  
+  .text-slide.active-slide span.animated-letter { /* Updated class name */
+    opacity: 1;
+    filter: blur(0px);
+    transition: 1s;
+  }
+  
+  .active-slide { /* Updated class name */
+    z-index: 10;
+  }
   
 
 

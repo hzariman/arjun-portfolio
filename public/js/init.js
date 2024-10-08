@@ -46,6 +46,68 @@ var wordflick = function () {
   },speed);
 };
 
+function createTextSlideAnimation(sentences, timer = 5000) {
+   console.log("Initializing text slide animation...");
+ 
+   // Ensure the box exists. PROBLEM HERE TODO MAYBE TRY WITHOUT JQUERY
+   const $box = $('#box');
+   if ($box.length === 0) {
+     console.error("Error: The container with id 'box' was not found in the DOM.");
+     return;
+   }
+ 
+   // Append the text slides to the container
+   var total = sentences.length - 1;
+   console.log("Total number of sentences:", total + 1);
+ 
+   for (var i = 0; i <= total; i++) {
+     console.log(`Creating slide for sentence ${i + 1}:`, sentences[i]);
+     $box.append('<p class="text-slide" id="textSlide'+i+'"></p>');
+      
+     var max = sentences[i].length - 1;
+     console.log(`Number of characters in sentence ${i + 1}:`, max + 1);
+ 
+     for (var j = 0; j <= max; j++) {
+       var char = sentences[i].charAt(j);
+       var transitionTime = Math.random() * 3;
+       var transitionDelay = Math.random();
+       console.log(`Appending character '${char}' with transition time: ${transitionTime}s and delay: ${transitionDelay}s`);
+       $('#textSlide'+i).append('<span class="animated-letter" style="transition: ' + transitionTime +'s; transition-delay: ' + transitionDelay +'s;">' + char + '</span>'); 
+     }
+   } 
+ 
+   var maxSlideIndex = $box.find('p').length;
+   console.log("Total number of slides created:", maxSlideIndex);
+ 
+   if (maxSlideIndex === 0) {
+     console.error("Error: No slides were created. Check if the box element is being correctly selected and if sentences are not empty.");
+     return;
+   }
+ 
+   var r = 0;
+   console.log("Starting animation with first slide active.");
+ 
+   $('#textSlide' + r).addClass('active-slide');
+ 
+   setInterval(function(){ 
+     console.log("Removing active class from slide:", r);
+     $('#textSlide' + r).removeClass('active-slide');
+ 
+     r++;
+ 
+     if (r == maxSlideIndex) {
+       console.log("Last slide reached, looping back to the first slide.");
+       r = 0;
+     }
+ 
+     setTimeout(function(){ 
+       console.log("Adding active class to slide:", r);
+       $('#textSlide' + r).addClass('active-slide');
+     }, 2000);
+ 
+   }, timer);
+ }
+ 
 (function($) {
 
    /**
@@ -302,7 +364,9 @@ var wordflick = function () {
       return false;
    });
 
-   wordflick();
+   // wordflick();
+   console.log($('#box'));
+   createTextSlideAnimation(['Cringe', 'Simping', 'being thicc'], 5000);
 
 
 }});
