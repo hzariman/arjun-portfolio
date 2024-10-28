@@ -5,8 +5,6 @@ let resumeData = {
     "lastname": "Naageshwaran",
     "role": "Full Stack Developer",
     "linkedinId":"Your ID",
-    "skypeid": "Your skypeid",
-    "roleDescription": "I like to learn and create applications in various parts of software development and like to learn about new technologies, write technical articles or simply play games in my free time.",
     "socialLinks":[
     {
     "name":"linkedin",
@@ -169,49 +167,6 @@ let resumeData = {
         "JD" : "Made this website :)",
         "CustomURL": "portfolio",
         },
-    ],
-    "skills":[
-    {
-    "skillname":"HTML5"
-    },
-    {
-    "skillname":"CSS"
-    },
-    {
-    "skillname":"Reactjs"
-    }
-    ],
-    "portfolio":[
-    {
-    "name":"project1",
-    "description":"mobileapp",
-    "imgurl":"images/portfolio/phone.jpg"
-    },
-    {
-    "name":"project2",
-    "description":"mobileapp",
-    "imgurl":"images/portfolio/project.jpg"
-    },
-    {
-    "name":"project3",
-    "description":"mobileapp",
-    "imgurl":"images/portfolio/project2.png"
-    },
-    {
-    "name":"project4",
-    "description":"mobileapp",
-    "imgurl":"images/portfolio/phone.jpg"
-    }
-    ],
-    "testimonials":[
-    {
-    "description":"This is a sample testimonial",
-    "name":"Some technical guy"
-    },
-    {
-    "description":"This is a sample testimonial",
-    "name":"Some technical guy"
-    }
     ]
     }
     export default resumeData
